@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGN Polarization Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <h1>AGN Polarization Explorer</h1>
+      <p class="subtitle">
+        GRMHD + iPole simulations of EHT-scale images:
+        intensity, linear &amp; circular polarization, and EVPA.
+      </p>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Controls -->
+    <section class="controls">
+      <h2>Filters</h2>
+      <div class="controls-row">
+        <label>
+          Quantity
+          <select id="quantityFilter">
+            <option value="">All</option>
+            <option value="I">Intensity (I)</option>
+            <option value="lp">Linear pol. (LP)</option>
+            <option value="cp">Circular pol. (CP)</option>
+            <option value="evpa">EVPA</option>
+          </select>
+        </label>
+
+        <label>
+          Spin
+          <select id="spinFilter">
+            <option value="">All</option>
+            <option value="0">0</option>
+            <option value="0.9">0.9</option>
+          </select>
+        </label>
+
+        <label>
+          Field
+          <select id="fieldFilter">
+            <option value="">All</option>
+            <option value="MAD">MAD</option>
+            <option value="SANE">SANE</option>
+          </select>
+        </label>
+
+        <label>
+          Viewing angle
+          <select id="angleFilter">
+            <option value="">All</option>
+            <option value="1">1°</option>
+            <option value="30">30°</option>
+            <option value="60">60°</option>
+            <option value="90">90°</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="hint">
+        By default you see <strong>all</strong> images. Use filters to focus on a spin,
+        magnetic configuration, or angle. Click “Add to comparison” on up to four
+        images to view them in a 2×2 grid.
+      </p>
+    </section>
+
+    <!-- Comparison grid -->
+    <section class="comparison">
+      <div class="comparison-header">
+        <h2>Comparison Grid (2×2)</h2>
+        <p>Choose images from the gallery below to compare.</p>
+      </div>
+      <div id="comparison-grid" class="comparison-grid">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <h2>Gallery</h2>
+      <div id="gallery">
+        <!-- filled by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Simulations: GRMHD + iPole. Website built with help from ChatGPT.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
