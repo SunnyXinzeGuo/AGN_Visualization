@@ -148,9 +148,11 @@ select:focus {
 
 .comparison-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, 1fr);  /* force 2 columns */
+  grid-template-rows: repeat(2, auto);    /* force 2 rows */
   gap: 0.8rem;
 }
+
 
 .comparison-card {
   background: var(--bg-panel);
